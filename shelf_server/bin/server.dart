@@ -14,11 +14,14 @@
 // limitations under the License.
 
 import 'package:functions_framework/serve.dart';
-import 'package:shelf/shelf.dart';
 import 'package:shelf_static/shelf_static.dart';
 
-Future<void> main(List<String> args) async => await serve(args, _functions);
+Future<void> main(List<String> args) async =>
+    await serve(args, _functionTargets);
 
-final _functions = <String, Handler>{
-  'function': createStaticHandler('app/web', defaultDocument: 'index.html'),
+final _functionTargets = <FunctionTarget>{
+  FunctionTarget.http(
+    'function',
+    createStaticHandler('app/web', defaultDocument: 'index.html'),
+  ),
 };
