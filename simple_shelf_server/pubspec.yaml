@@ -1,5 +1,5 @@
-name: shelf_server_test
-description: A new Flutter project.
+name: simple_shelf_server
+description: Simple standalone server for serving flutter web apps, utilizing shelf, goal is full stack dart.
 
 environment:
   sdk: ">=2.12.1 <3.0.0"

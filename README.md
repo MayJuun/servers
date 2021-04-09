@@ -1,6 +1,6 @@
 # servers
 
-This is a simple repo because I was tired of trying to remember everytime how to host a flutter project on a server. I've put simple examples of two different servers here. Both very small and lightweight. One uses the [get_server](https://pub.dev/packages/get_server) package, the other uses primarily [shelf](https://pub.dev/packages/shelf) but also [functions_framework](https://github.com/GoogleCloudPlatform/functions-framework-dart).  All they do is host your Flutter web project. There's really no other functionality. They both use the same setup and the same Docker file. Below are the instructions for using Docker to containerize them and upload them to google cloud.
+This is a simple repo because I was tired of trying to remember everytime how to host a flutter project on a server. I've put simple examples of two different servers here. Both very small and lightweight. One uses the [get_server](https://pub.dev/packages/get_server) package, the other uses primarily [shelf](https://pub.dev/packages/shelf) but also [functions_framework](https://github.com/GoogleCloudPlatform/functions-framework-dart).  All they do is host your Flutter web project. There's really no other functionality. They both use the same setup and the same Docker file. Below are the instructions for using Docker to containerize and upload them to google cloud.
 
 ## Quick shout outs to the following people for making my life much easier for this:
 - [Jermaine Oppong YouTube Tutorial](https://www.youtube.com/watch?v=y6Z1V8QpGFc)
@@ -13,7 +13,8 @@ This is a simple repo because I was tired of trying to remember everytime how to
 - Take a flutter project that's ready for web deployment
 - In the root of that directory, run
 ```$ flutter build web```
-- copy the contents of folder ```build/web``` to the folder ```web``` in the server 
+- copy the contents of folder ```build/web``` to the folder ```web``` in the server - currently they just hold an example of the startup app
+- replace what is currently in the web folder (although if you want to use the workflow of having OAuth done in an external window, I've kept the static.html file in the web folder that you may use, read more about [that here](https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463))
 - From the root of the server project, run the following:
 ```$ docker build -t projectName .```
 - Test it:  

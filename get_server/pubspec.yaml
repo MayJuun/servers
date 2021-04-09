@@ -1,8 +1,0 @@
-name: get_server_example
-description: Using the get_server package to host a flutter web project.
-
-environment:
-  sdk: ">=2.7.0 <3.0.0"
-
-dependencies:
-  get_server: ^0.91.0
