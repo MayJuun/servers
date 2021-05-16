@@ -13,8 +13,8 @@ This is a simple repo because I was tired of trying to remember everytime how to
 - Take a flutter project that's ready for web deployment
 - In the root of that directory, run
 ```$ flutter build web```
-- copy the contents of folder ```build/web``` to the folder ```web``` in the server - currently they just hold an example of the startup app
-- replace what is currently in the web folder (although if you want to use the workflow of having OAuth done in an external window, I've kept the static.html file in the web folder that you may use, read more about [that here](https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463))
+- copy the contents of folder ```build/web``` (NOT the web folder - that would be too obvious) to the folder ```web``` in the server - currently they just hold an example of the startup app
+- replace what is currently in the web folder (although if you want to use the workflow of having OAuth done in an external window, I've kept the redirect.html file in the web folder that you may use, read more about [that here](https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463))
 - From the root of the server project, run the following:
 ```$ docker build -t projectName .```
 - Test it:  
